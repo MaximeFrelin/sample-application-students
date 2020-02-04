@@ -3,7 +3,7 @@ language: java
 install:
   - mvn clean verify
   - docker-compose build
-  - docker login -u $login -p $password
+  - docker login -u $Login -p $Password
   - docker tag sample-application-students_api maximefrelin/sample-api
   - docker tag sample-application-students_db maximefrelin/sample-db
   - docker push maximefrelin/sample-api
