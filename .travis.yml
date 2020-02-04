@@ -1,5 +1,10 @@
 language: java
-jdk: oraclejdk11
 
 install:
-  - ./mvnw clean verify
+  - mvnw clean verify
+  - docker-compose build
+  - docker login -u $login -p $password
+  - docker tag sample-application-students_api maximefrelin/sample-api
+  - docker tag sample-application-students_db maximefrelin/sample-db
+  - docker push maximefrelin/sample-api
+  - docker push maximefrelin/sample-db

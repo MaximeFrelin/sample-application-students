@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  api:
+    container_name: api
+    build:
+      context: ./sample-application-db-changelog-job
+      dockerfile: Dockerfile
+  db:
+    container_name: db
+    build:
+      context: ./sample-application-http-api-server
+      dockerfile: Dockerfile
