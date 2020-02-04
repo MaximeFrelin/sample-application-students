@@ -1,14 +1,5 @@
 language: java
 jdk: oraclejdk11
 
-cache:
-    directories:
-        - $HOME/.m2
-
-jobs:
-    include:
-        - stage: build
-        install: true
-        script: 
-            - ./mvnw clean verify
-            - ls
+install:
+  - ./mvnw clean verify
