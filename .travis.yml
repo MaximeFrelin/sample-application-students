@@ -9,4 +9,6 @@ jobs:
     include:
         - stage: build
         install: true
-        script: ./mvnw clean verify
+        script: 
+            - ./mvnw clean verify
+            - ls
